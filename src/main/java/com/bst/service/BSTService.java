@@ -6,7 +6,7 @@ public interface BSTService {
 
     public int getDeepestNodeOfBST(BSTNode rootNode);
     public int getMaxDepthOfBST(BSTNode rootNode);
-    public String getDeepestNodeAndMaxDepth(int []nodeData);
-    public BSTNode constructBinaryTreeFromArray(int []nodeData);
+    public String getDeepestNodeAndMaxDepth(int []nodeValues);
+    public BSTNode constructBinaryTreeFromArray(int []nodeValues);
 
 }

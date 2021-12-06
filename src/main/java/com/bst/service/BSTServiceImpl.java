@@ -9,12 +9,12 @@ public class BSTServiceImpl implements BSTService {
     /**
      * This function will construct a binary tree out of the array passed as method parameter
      * and returns the deepest node and max depth of the binary tree.
-     * @param nodeData
+     * @param nodeValues
      * @return
      */
     @Override
-    public String getDeepestNodeAndMaxDepth(int[] nodeData) {
-        BSTNode rootNode = constructBinaryTreeFromArray(nodeData);
+    public String getDeepestNodeAndMaxDepth(int[] nodeValues) {
+        BSTNode rootNode = constructBinaryTreeFromArray(nodeValues);
         String response = "deepest, "+getDeepestNodeOfBST(rootNode) +"; depth, " + getMaxDepthOfBST(rootNode);
         return response;
     }
@@ -23,14 +23,14 @@ public class BSTServiceImpl implements BSTService {
      * This method will take the first node from the array as the root node and next elements within
      * the array are compared against the data of root node. if root node data > next node data then
      * the node is added to the left subtree otherwise its added on to the right subtree.
-     * @param nodeData
+     * @param nodeValues
      * @return
      */
     @Override
-    public BSTNode constructBinaryTreeFromArray(int[] nodeData) {
+    public BSTNode constructBinaryTreeFromArray(int[] nodeValues) {
 
         BSTNode rootNode =null;
-        for (int data: nodeData){
+        for (int data: nodeValues){
              rootNode = insertNode (rootNode,data);
         }
 
